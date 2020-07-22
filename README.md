@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# regextooljs - title component - a regex tool to construct/parse js regexes
+intro tool => goal to become unneeded quickly (uniform goal for most intro and/or teach tools), single page app with react
 
-## Available Scripts
+* mock ui => basic readmes for each, start from the main piece and potential pitfalls to assess feasibility () 
 
-In the project directory, you can run:
+Version 2 (ref to new docx file)
+Components (i.e. components that require a lot of space will modify the whole page when active/interacted with?): 
+0. title component
+1. pre-const (on the const side, e.g. top left) regex purpose/intuition -regex => set of strings by comp/attr they need to have to become members (must have the comp/attr in same relative order) - static examples with visuals (things to be represented/showcased in the examples - set of strings, relative order, components, compare to normal strings, diversity - identical vs non-identical initial states within set)
+2. pre-const heuristic - start from certain/rigid components to uncertain/flexible ones (use terms from prev)
+3. literals and metas connected, additional tools on the side
+    *general1 - info on metas and "additional tools" is provided (i.e. choice among alternatives + some basic info when hoverred over?)
+    *general2 - when you press any of the buttons/choices => available pairings are highlighted + unavailable ones greyed out (for additional tools you may have to rearrange triangle + naming)
+    *general3 - some limits on the length of input boxes and arrays
+    *additional tools - when you press:
+        1. a "specific"(depending on what you choose, maybe a name on the left side) arr pops up on top of wh regex (and becomes active, you push things into it from the bottom) (arrs are the links between const and eng parse)
+            1a. you are allowed to nest those, however there would be a limit of depth (e.g. 4-5 deep, # of arrays)
+            1b. two active/incomplete arrs on the same level will not be allowed (you would have to finish one before moving on)
+            1c. arrays won't be accessible directly unless tool for foreign regexes (copy/past to parse), only "accessible/modifiable" through the upside triangle input boxes
+            1d. all arrays will 1. be named on the side and 2. will have this functionality (i.e. except wh regex and push down):
+                    1da. drag and drop outside to delete a component, change places inside, split components by spaces (this is default for readability), join (for copy/paste and testing), parse(to engage engine), "trim"), push down (available for sub components), delete (in the case of wh regex => makes it empty, for others it eliminates them)
+    *literals trigger input boxes (inbetween them and metas???) 
+        *groups of literals and metas are allowed in the input box but additional tools are not (arrs pop up instead and literals and metas are highlighted expanded(input box is open))
+4. pre-engine component to explain bahavior of engine - follow the pattern from component 1 (i.e. static examples of visuals, terms etc.?) 
+5. engine parse component (i.e. feedback min/max stuff is important)
+6. links to exercises? right (side of arrs, before the eng side) link to stackoverflow [regex] and http://play.inginf.units.it/#/
+7. post-engine heuristic - once you have something that works - spend some time trying to minimize correlation to minimize chance of catastrophic backtracking, test again
+8. tool for inputing foreign js regexes for parse
 
-### `npm start`
+Proceed with static of the mock (data passed through props only, static/no user interaction)
+    * do canvas stuff for algo tracker, pre const, pre engine sequentially
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*** for the parse logic perform tests
+*** for the browser compatibility perform tests
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+*** react pages, single pages generally, window keyboard shortcuts to different "views"/subpages?
